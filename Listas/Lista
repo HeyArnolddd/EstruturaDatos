@@ -22,4 +22,17 @@ public class Lista {
         nodoRecorre.siguiente = nodoFin;
     }
 
+    public void insertarNodoIndice(int dato, int k) {
+        Nodo nodoIndice = new Nodo(dato);
+        Nodo nodoRecorre = cabeza;
+         int i = 0;
+
+        while (i<k && nodoRecorre.siguiente!=null) {
+            nodoRecorre = nodoRecorre.siguiente;
+            i++;
+        }
+        nodoIndice.siguiente=nodoRecorre.siguiente;
+        nodoRecorre.siguiente=nodoIndice;
+        
+    }
 }
