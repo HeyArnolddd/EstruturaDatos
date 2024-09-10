@@ -8,3 +8,5 @@ public class Nodo
         this.dato=dato;
     }
 }
+
+//10-09-24
