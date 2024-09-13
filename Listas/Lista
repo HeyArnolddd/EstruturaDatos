@@ -25,14 +25,43 @@ public class Lista {
     public void insertarNodoIndice(int dato, int k) {
         Nodo nodoIndice = new Nodo(dato);
         Nodo nodoRecorre = cabeza;
-         int i = 0;
+        int i = 1;
 
-        while (i<k && nodoRecorre.siguiente!=null) {
-            nodoRecorre = nodoRecorre.siguiente;
+        while (i < k) {
+          nodoRecorre = nodoRecorre.siguiente;
             i++;
         }
-        nodoIndice.siguiente=nodoRecorre.siguiente;
-        nodoRecorre.siguiente=nodoIndice;
-        
+        nodoIndice.siguiente = nodoRecorre.siguiente;
+        nodoRecorre.siguiente = nodoIndice;
+
     }
+
+    public void imprimirLista() {
+        Nodo nodoRecorre = cabeza;
+
+        while (nodoRecorre != null) {
+            System.out.print(nodoRecorre.dato + "->");
+            nodoRecorre = nodoRecorre.siguiente;
+        }
+        System.out.println("NULL");
+    }
+    
+    public int getTamaño()
+    {
+        int i=0;
+        Nodo nodoRecorre = cabeza;
+        while(nodoRecorre!=null )
+        {
+            i++;
+            nodoRecorre=nodoRecorre.siguiente;
+        }
+        return i;
+    }
+    
+    public boolean isEmpty()
+    {
+        return (cabeza==null);
+    }
+    
+
 }
