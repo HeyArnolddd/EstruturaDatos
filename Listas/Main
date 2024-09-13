@@ -1,0 +1,45 @@
+public class Main 
+{
+    public static void main(String[] args) {
+         Lista listaEjemplo= new Lista();
+         listaEjemplo.imprimirLista();
+         
+         System.out.println();
+         System.out.println("Insertado al inicio");
+         listaEjemplo.insertarNodoInicio(10);
+         listaEjemplo.imprimirLista();
+         
+         listaEjemplo.insertarNodoInicio(5);
+         listaEjemplo.imprimirLista();
+         
+         listaEjemplo.insertarNodoInicio(1);
+         listaEjemplo.imprimirLista();
+         
+         System.out.println("--------------------------------------");
+         System.out.println();
+         System.out.println("Insertando al final");
+         
+         listaEjemplo.insertarNodoFinal(20);
+         listaEjemplo.imprimirLista();
+         listaEjemplo.insertarNodoFinal(30);
+         listaEjemplo.imprimirLista();
+         System.out.println("--------------------------------------");
+         System.out.println();
+         System.out.println("Insertando en indice");
+         
+         listaEjemplo.insertarNodoIndice(15, 3);
+         listaEjemplo.imprimirLista();
+         listaEjemplo.insertarNodoIndice(3, 4);
+         listaEjemplo.imprimirLista();
+         
+         System.out.print("Tamaño lista: ");
+         System.out.println(listaEjemplo.getTamaño());
+         System.out.println();
+         listaEjemplo.insertarNodoInicio(88);
+         listaEjemplo.imprimirLista();
+         System.out.print("Tamaño lista: ");
+         System.out.println(listaEjemplo.getTamaño());
+    }
+   
+  
+}
