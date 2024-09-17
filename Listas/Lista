@@ -28,7 +28,7 @@ public class Lista {
         int i = 1;
 
         while (i < k) {
-          nodoRecorre = nodoRecorre.siguiente;
+            nodoRecorre = nodoRecorre.siguiente;
             i++;
         }
         nodoIndice.siguiente = nodoRecorre.siguiente;
@@ -45,23 +45,56 @@ public class Lista {
         }
         System.out.println("NULL");
     }
-    
-    public int getTamaño()
-    {
-        int i=0;
+
+    public int getTamaño() {
+        int i = 0;
         Nodo nodoRecorre = cabeza;
-        while(nodoRecorre!=null )
-        {
+        while (nodoRecorre != null) {
             i++;
-            nodoRecorre=nodoRecorre.siguiente;
+            nodoRecorre = nodoRecorre.siguiente;
         }
         return i;
     }
-    
-    public boolean isEmpty()
-    {
-        return (cabeza==null);
+
+    public boolean isEmpty() {
+        return (cabeza == null);
+    }
+
+    public void eliminarNodoInicio() {
+        Nodo inicio = cabeza;
+        cabeza = inicio.siguiente;
+        inicio.siguiente = null;
+    }
+
+    public void eliminarNodoFinal() {
+
+        if (cabeza.siguiente == null) {
+            cabeza = null;
+        } else {
+            Nodo nodoRecorre = cabeza;
+            while (nodoRecorre.siguiente.siguiente != null) {
+                nodoRecorre = nodoRecorre.siguiente;
+            }
+            nodoRecorre.siguiente = null;
+        }
     }
     
+    public void eliminarIndice(int indice){
+       
+        Nodo nodoRecorre=cabeza;
+        int cont=0;
+        while(cont<(indice-1)&&nodoRecorre.siguiente.siguiente!=null)
+        {
+            nodoRecorre=nodoRecorre.siguiente;
+            cont++;
+        }
+        Nodo aux= nodoRecorre.siguiente;
+        nodoRecorre.siguiente=aux.siguiente;
+        aux.siguiente=null;
+    }
 
+    public Nodo buscarIndice(int idx)
+    {
+        
+    }
 }
