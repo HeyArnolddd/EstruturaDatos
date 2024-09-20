@@ -1,3 +1,4 @@
+
 public class Lista2 {
 
     private Nodo2 cabeza;
@@ -66,27 +67,29 @@ public class Lista2 {
         }
         tamaño++;
     }
-    
-    public void iniciAfin()
-    {
-        Nodo2 nodoRecorre= cabeza;
+
+    public void iniciAfin() {
+        Nodo2 nodoRecorre = cabeza;
         System.out.print("CABEZA -> ");
-        while(nodoRecorre!=null){
-            System.out.print(nodoRecorre.dato+ " -> ");
-            nodoRecorre=nodoRecorre.siguiente;
+        while (nodoRecorre != null) {
+            System.out.print(nodoRecorre.dato + " -> ");
+            nodoRecorre = nodoRecorre.siguiente;
         }
         System.out.print("FINAL");
     }
-    
-    public void finAinicio(){
-            Nodo2 nodoRecorre= cola;
+
+    public void finAinicio() {
+        Nodo2 nodoRecorre = cola;
         System.out.print("FINAL -> ");
-         while(nodoRecorre!=null){
-            System.out.print(nodoRecorre.dato+ " -> ");
-            nodoRecorre=nodoRecorre.anterior;
+        while (nodoRecorre != null) {
+            System.out.print(nodoRecorre.dato + " -> ");
+            nodoRecorre = nodoRecorre.anterior;
         }
-          System.out.print("INICIO");
+        System.out.print("INICIO");
     }
-            
+
+    public int getTamano() {
+        return this.tamaño;
+    }
 
 }
