@@ -1,0 +1,92 @@
+public class Lista2 {
+
+    private Nodo2 cabeza;
+    private Nodo2 cola;
+    private int tamaño;
+
+    public Lista2() {
+        cabeza = null;
+        cola = null;
+        tamaño = 0;
+    }
+
+    public void insertarInico(int dato) {
+        Nodo2 nodito = new Nodo2(10);
+        if (estaVacia()) {
+            cola = nodito;
+        } else {
+            cabeza.anterior = nodito;
+            nodito.siguiente = cabeza;
+        }
+
+        cabeza = nodito;
+        tamaño++;
+
+    }
+
+    public boolean estaVacia() {
+        return tamaño == 0;
+    }
+
+    public void insertarFinal(int dato) {
+        Nodo2 nodito = new Nodo2(dato);
+        if (estaVacia()) {
+            cabeza = nodito;
+        } else {
+            cola.siguiente = nodito;
+            nodito.anterior = cola;
+        }
+        cola = nodito;
+        tamaño++;
+    }
+
+    public void insertarIndice(int dato, int idx) {
+        Nodo2 nodito = new Nodo2(dato);
+        if (estaVacia() && idx != 0) {
+            System.out.println("Posicion no existe");
+        } else if (estaVacia() && idx == 0) {
+            insertarInico(dato);
+        } else {
+            Nodo2 recorre = cabeza;
+            int cont = 0;
+
+            while (cont < (idx - 1) && recorre.siguiente != null) {
+                recorre = recorre.siguiente;
+                cont++;
+            }
+
+            if (cont == idx - 1) {
+                nodito.siguiente = recorre.siguiente;
+                recorre.siguiente.anterior = nodito;
+                recorre.siguiente = nodito;
+                nodito.anterior = recorre;
+            } else {
+                System.out.println("Posicion no existe");
+            }
+        }
+        tamaño++;
+    }
+    
+    public void iniciAfin()
+    {
+        Nodo2 nodoRecorre= cabeza;
+        System.out.print("CABEZA -> ");
+        while(nodoRecorre!=null){
+            System.out.print(nodoRecorre.dato+ " -> ");
+            nodoRecorre=nodoRecorre.siguiente;
+        }
+        System.out.print("FINAL");
+    }
+    
+    public void finAinicio(){
+            Nodo2 nodoRecorre= cola;
+        System.out.print("FINAL -> ");
+         while(nodoRecorre!=null){
+            System.out.print(nodoRecorre.dato+ " -> ");
+            nodoRecorre=nodoRecorre.anterior;
+        }
+          System.out.print("INICIO");
+    }
+            
+
+}
