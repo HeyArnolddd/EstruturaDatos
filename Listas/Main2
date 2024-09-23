@@ -1,0 +1,32 @@
+public class Main2
+{
+   public static void main(String[] args)
+   {
+        Listas2 listas = new Listas2 ();
+        System.out.println("--------Insertando al inico--------");
+        listas.insertarInico(2);
+        listas.imprimirLista();
+
+        listas.insertarInico(4);
+        listas.imprimirLista();
+
+        System.out.println("--------Insertando al Final--------");
+        listas.insertarFinal(6);
+        listas.imprimirLista();
+
+        listas.insertarFinal(8);
+        listas.imprimirLista();
+
+        System.out.println(--------Insertando al Inidice--------)
+        listas.insertarIndice(10,1);
+        listas.imprimirLista();
+
+        listas.insertarIndice(12,2);
+        listas.imprimirLista();
+
+        System.out.println("--------Tamano de lista--------");
+        listas.getTamano();
+
+
+    }
+}
