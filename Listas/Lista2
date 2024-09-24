@@ -92,4 +92,73 @@ public class Lista2 {
         return this.tamaño;
     }
 
+    public void eliminarInicio(){
+        if(estaVacia()){
+            System.out.println("Nada por eliminar");
+
+        }else if(cebeza==cola){
+            cola=null;
+            cabeza=null:
+        }else{
+            cabeza=cabeza.siguiente;
+            cabeza.anterior.siguiente=null;
+            cabeza.anterior=null;
+            tamaño--;
+        }
+    }
+
+    public void eliminarFinal(){
+        if(estaVacia()){
+            System.out.println("Nada por eliminar");
+
+        }else if(cebeza==cola){
+            cola=null;
+            cabeza=null;
+            tamano--;
+        }else{
+            cola=cola.anterior;
+            cola.siguiente.anterior=null;
+            cola.siguiente=null;
+            tamano--;
+        }
+    }
+
+    public void eliminar NodoPos(int pos) {
+        if (estaVacia()) {
+        System.out.println("Nada por eliminar");
+        } else if (cabeza == cola) {
+        cola = null;
+        cabeza = null;
+        } else {
+        Nodo2 recorre = cabeza;
+        int cont = 0;
+        while (cont < pos-1 && recorre.siguiente != null) {
+        recorre = recorre.siguiente;
+        cont++;
+        }
+        if (cont == pos-1) {
+        recorre.siguiente = recorre.siguiente.siguiente;
+        recorre.siguiente.anterior = recorre;
+        tamano--;
+        } else {
+        System.out.println("Posicion no existente");
+            }
+         }
+        }
+        
+        public int buscarNodo (int idx) {
+            Nodo2 nodoRecorre = cabeza;
+            int cont = 0;
+            while (cont < idx && nodoRecorre.siguiente != null) {
+            nodoRecorre = nodoRecorre.siguiente;
+            cont++;
+            }
+            if (cont == idx){
+            return nodoRecorre.dato;
+            }
+            else{
+            System.out.println("Posicion no existe");
+            return 0;
+            }
+            }
 }

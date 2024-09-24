@@ -1,32 +1,28 @@
 public class Main2
 {
-   public static void main(String[] args)
-   {
-        Listas2 listas = new Listas2 ();
-        System.out.println("--------Insertando al inico--------");
-        listas.insertarInico(2);
-        listas.imprimirLista();
-
-        listas.insertarInico(4);
-        listas.imprimirLista();
-
-        System.out.println("--------Insertando al Final--------");
-        listas.insertarFinal(6);
-        listas.imprimirLista();
-
-        listas.insertarFinal(8);
-        listas.imprimirLista();
-
-        System.out.println(--------Insertando al Inidice--------)
-        listas.insertarIndice(10,1);
-        listas.imprimirLista();
-
-        listas.insertarIndice(12,2);
-        listas.imprimirLista();
-
-        System.out.println("--------Tamano de lista--------");
-        listas.getTamano();
-
-
-    }
+    public static void main(String[] args) { // TODO code application logic here
+        Lista2 lista Ejemplo = new Lista2();
+        System.out.println("Nueva lista"); listaEjemplo.imprimir Lista IniAFin();
+        lista Ejemplo.imprimir Lista FinAIni();
+        System.out.println("");
+        System.out.println("Eliminando nodo del inicio");
+        lista Ejemplo.eliminarNodoInicio();
+        lista Ejemplo.imprimir Lista IniAFin();
+        System.out.println("");
+        System.out.println("Eliminando nodo en posicion 1"); lista Ejemplo.eliminarNodo Pos(1);
+        lista Ejemplo.imprimir Lista IniAFin();
+        System.out.println("");
+        System.out.println("Eliminando nodo del final");
+        lista Ejemplo.eliminarNodo Final();
+        lista Ejemplo.imprimir Lista IniAFin();
+        System.out.println("");
+        System.out.println("Eliminando nodo del inicio");
+        lista Ejemplo.eliminarNodoInicio();
+        lista Ejemplo.imprimirLista IniAFin();
+        System.out.println("");
+        System.out.println("Eliminando nodo del final");
+        lista Ejemplo.eliminarNodoFinal();
+        lista Ejemplo.imprimirLista IniAFin();
+        A
+        }
 }
